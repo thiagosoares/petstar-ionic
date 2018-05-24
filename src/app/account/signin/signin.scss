@@ -1,0 +1,101 @@
+page-signin {
+
+    /**
+    * Variables
+    */
+
+    $white:    #FFF;
+    $blue:     #1B3255;
+    $gray-de:  #DEDEDE;
+    $blue-48:  #4081BF;
+    $blue-4a:  #40A6BF;
+    $gray-89:  #898989;
+    $gray-72:  #727272;
+
+    $orange-1: #f16628;
+    $orange-2:  #f16828f0;
+    $orange-3:  #f16828cb;
+
+    @mixin border-radius($radius) {
+        -webkit-border-radius: $radius;
+            -moz-border-radius: $radius;
+            -ms-border-radius: $radius;
+                border-radius: $radius;
+    }
+    @mixin background-horizontal($left, $middle, $right) {
+        background: $left;
+        background: -webkit-linear-gradient(left, $left 0%, $middle 50%, $right 100%);
+        background:    -moz-linear-gradient(left, $left 0%, $middle 50%, $right 100%);
+        background:         linear-gradient(to right, $left 0%, $middle 50%, $right 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$left', endColorstr='$right',GradientType=0);
+    }
+
+    /* Header */
+    .main-header {
+        .toolbar {
+            min-height: 60px;
+            .toolbar-background {
+                height: 60px;
+                
+                @include background-horizontal($orange-1, $orange-2, $orange-3);
+            }
+            .toolbar-title {
+                font-size: 22px;
+                color: #FFFFFF;
+                font-weight: bold;
+                /*text-align: center;*/
+            }
+            .bar-button-default-md:hover:not(.disable-hover) {
+                color: $white;
+            }
+        }
+    }
+    
+    .logo_box {
+        height: 40%;
+    }
+
+    img {
+        width: 130px;
+        align-self: center;
+        margin: auto;
+        display: block;
+        padding: 50px 20px 20px 20px;
+    }
+
+    .bg {
+        background: url('/assets/imgs/drawable/bg_login2.png');
+        background-repeat: no-repeat;
+        // background-attachment: fixed;
+        background-position: center; 
+    }
+
+    .left {
+        font-weight: bold;
+        text-align: center;
+        color:#f7912b;
+    }
+
+    .left a {
+        color:#f7912b;
+    }
+
+    .right {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .right a {
+        color:#f7912b;
+    }
+
+   .login-ion-item-transparent {
+        background-color: transparent;
+    }
+
+    .login-button {
+        //margin: 10px;
+        //width: 80%;
+        
+    }
+}

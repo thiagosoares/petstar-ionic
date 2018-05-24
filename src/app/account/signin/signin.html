@@ -1,0 +1,68 @@
+<ion-header>
+    <div class="main-header">
+      <ion-navbar>
+        <ion-title>Get in</ion-title>
+      </ion-navbar>
+    </div>
+</ion-header>
+
+<ion-content class="bg">
+
+  <div class="logo_box">
+    <img src="assets/imgs/drawable/logo_login.png"/>
+  </div>
+
+  <form>
+
+    <ion-grid>
+
+      
+      <ion-row>
+          <ion-item class="login-ion-item-transparent">
+            <ion-label floating ><ion-icon name="mail"></ion-icon> E-mail</ion-label>
+            <ion-input name="email" [(ngModel)]="creds.email" type="text"> </ion-input>
+          </ion-item>
+      </ion-row>  
+
+      <ion-row>
+        <ion-item class="login-ion-item-transparent">
+            <ion-label floating ><ion-icon name="key"></ion-icon> Password</ion-label>
+            <ion-input name="senha" [(ngModel)]="creds.senha"  type="password"> </ion-input>
+        </ion-item>
+      </ion-row>  
+
+      <ion-row>
+        <button ion-button color="primary" (click)="login()" class="login-button" block>Entrar</button>
+      </ion-row>  
+  
+
+    </ion-grid>  
+
+
+
+
+    
+  </form>
+
+  <ion-grid>
+
+
+    <ion-row>
+    </ion-row>  
+
+    <ion-row>
+      <ion-col>
+        <div class="left">
+          <a (click)="login()">Forgot Password?</a>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="right">
+          <a (click)="login()">Sign Up</a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+      
+
+</ion-content>
